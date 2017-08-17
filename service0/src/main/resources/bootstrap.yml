@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service0
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:8084
+server:
+  port: 8089

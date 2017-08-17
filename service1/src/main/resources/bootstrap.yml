@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service1
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:8084
+  server:
+  port: 7077

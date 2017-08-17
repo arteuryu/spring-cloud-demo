@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8084
+spring:
+  profiles: dev
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://git-ma.paic.com.cn/YUERTE969/spring-cloud-config-repo.git
+          searchPaths: data
+          username: yuerte969
+          password: Xtz8258393
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost:8084
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8080/eureka/  #注册中心地址
+
+---
+server:
+  port: 8084
+spring:
+  profiles: prod
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://git-ma.paic.com.cn/YUERTE969/spring-cloud-config-repo.git
+          searchPaths: data
+          username: yuerte969
+          password: Xtz8258393
+eureka:
+  instance:
+    hostname: 10.30.116.157
+    instance-id: 10.30.116.157:8084
+  client:
+    serviceUrl:
+      defaultZone: http://10.30.116.139:8080/eureka/  #注册中心地址

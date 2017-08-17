@@ -1,0 +1,9 @@
+server:
+  port: 9955
+spring:
+  application:
+    name: consul-test
+  cloud:
+    consul:
+      host: localhost
+
