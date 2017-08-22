@@ -29,26 +29,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- tag::plugin[] -->
-            <!--<plugin>-->
-                <!--<groupId>com.spotify</groupId>-->
-                <!--<artifactId>docker-maven-plugin</artifactId>-->
-                <!--<version>0.4.13</version>-->
-                <!--<configuration>-->
-                    <!--<imageName>${parent.artifactId}/${project.artifactId}</imageName>-->
-                    <!--&lt;!&ndash;<dockerDirectory>target/docker</dockerDirectory>&ndash;&gt;-->
-                    <!--<baseImage>java:8</baseImage>-->
-                    <!--<entryPoint>["java","-jar","registry-1.0-SNAPSHOT.jar"]</entryPoint>-->
-                    <!--<resources>-->
-                        <!--<resource>-->
-                            <!--<targetPath>/</targetPath>-->
-                            <!--<directory>${project.build.directory}</directory>-->
-                            <!--<include>${project.build.finalName}.jar</include>-->
-                        <!--</resource>-->
-                    <!--</resources>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <!-- end::plugin[] -->
+             tag::plugin[]
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+                <configuration>
+                    <imageName>${parent.artifactId}/${project.artifactId}</imageName>
+                    <!--<dockerDirectory>target/docker</dockerDirectory>-->
+                    <baseImage>java:8</baseImage>
+                    <entryPoint>["java","-jar","registry-1.0-SNAPSHOT.jar"]</entryPoint>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+             end::plugin[]
         </plugins>
     </build>
 </project>
