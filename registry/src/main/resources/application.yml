@@ -7,7 +7,7 @@ spring:
 spring:
   profiles: prod
 server:
-  port: 8080 # 注册中心占用8080端口
+  port: 8888 # 注册中心占用8080端口
 eureka:
   instance:
     hostname: 10.30.116.139
@@ -21,7 +21,7 @@ eureka:
 spring:
   profiles: dev
 server:
-  port: 8080 # 注册中心占用8080端口
+  port: 8888 # 注册中心占用8080端口
 eureka:
   instance:
     hostname: localhost
